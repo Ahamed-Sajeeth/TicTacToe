@@ -130,6 +130,17 @@ if(win == 1)
   alert ("O wins");
   location.reload();}
 }
+ 
+var r;
+for( var i=0;i<3;i=i+1)
+ { for( var j =0;j<3;j=j+1)
+   {if(ar[i][j]==4)
+      {r=1;
+     break;}
+   }
+}
+if(r!=1)
+alert("Tie--Noone wins");
       
 }
 </script>
