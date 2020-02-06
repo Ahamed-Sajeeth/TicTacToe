@@ -96,7 +96,8 @@ var ar=[
 [4,4,4]
 ];
 function func(n1,n2,id) { 
-  count=count+1;
+  if(ar[n1][n2]==4)
+  {     count=count+1;
   if(count%2==0)
   { ar[n1][n2]=0;
      document.getElementById(id).src="o.jpeg";
@@ -105,6 +106,7 @@ else
   { ar[n1][n2]=1;
  document.getElementById(id).src="x.jpeg"; 
   check_winner(1); }
+  }
 function check_winner(n)
 {  var win=0;
    if( ar[0][0]==1 && ar[0][1]==1 && ar[0][2]==1)
