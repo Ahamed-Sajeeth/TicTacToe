@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TicTacToe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#grid {
+   background-image: url('grid.png');
+  background-repeat: no-repeat;
+ width:100px;
+height:100px;
+
+}
+#oo {
+    position: absolute; 
+    visibility: visible; 
+     left: 15px; 
+       top: 20px; 
+       z-index: 20; 
+}#ol {
+    position: absolute; 
+    visibility: visible; 
+     left: 200px; 
+       top: 20px; 
+       z-index: 20; 
+}
+#ot {
+    position: absolute; 
+    visibility: visible; 
+     left: 400px; 
+       top: 20px; 
+       z-index: 20; 
+}
+#lo {
+    position: absolute; 
+    visibility: visible; 
+     left: 15px; 
+       top: 200px; 
+       z-index: 20; 
+}#ll {
+    position: absolute; 
+    visibility: visible; 
+     left: 200px; 
+       top: 200px; 
+       z-index: 20; 
+}
+#lt {
+    position: absolute; 
+    visibility: visible; 
+     left: 400px; 
+       top: 200px; 
+       z-index: 20; 
+}
+#to {
+    position: absolute; 
+    visibility: visible; 
+     left: 15px; 
+       top: 400px; 
+       z-index: 20; 
+}#tl {
+    position: absolute; 
+    visibility: visible; 
+     left: 200px; 
+       top: 400px; 
+       z-index: 20; 
+}
+#tt {
+    position: absolute; 
+    visibility: visible; 
+     left: 400px; 
+       top: 400px; 
+       z-index: 20; 
+}
+</style>
+</head>
+<body id="grid">
+<button  onclick="func(0,0,'oo')"><img src="test.png" id="oo" style="width:150px;height:150px;"></button>
+<button onclick="func(0,1,'ol')"><img src="test.png" id="ol"  style="width:150px;height:150px;"></button>
+<button onclick="func(0,2,'ot')"><img src="test.png" id="ot"  style="width:150px;height:150px;"></button>
+
+<button  onclick="func(1,0,'lo')"><img src="test.png" id="lo" style="width:150px;height:150px;"></button>
+<button onclick="func(1,1,'ll')"><img src="test.png" id="ll"  style="width:150px;height:150px;"></button>
+<button onclick="func(1,2,'lt')"><img src="test.png" id="lt"  style="width:150px;height:150px;"></button>
+
+<button  onclick="func(2,0,'to')"><img src="test.png" id="to" style="width:150px;height:150px;"></button>
+<button onclick="func(2,1,'tl')"><img src="test.png" id="tl"  style="width:150px;height:150px;"></button>
+<button onclick="func(2,2,'tt')"><img src="test.png" id="tt"  style="width:150px;height:150px;"></button>
+
+
+
+<script>
+var count=0;
+var ar=[
+     [4,4,4],
+   [4,4,4],
+[4,4,4]
+];
+function func(n1,n2,id) { 
+  count=count+1;
+  if(count%2==0)
+  { ar[n1][n2]=0;
+     document.getElementById(id).src="o.png"; }
+else
+  { ar[n1][n2]=1;
+
+ document.getElementById(id).src="x.png"; }
+      
+}
+</script>
+
+
+</body>
+</html>
